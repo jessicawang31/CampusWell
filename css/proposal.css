@@ -1,0 +1,11 @@
+header {
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: purple;
+    color: beige;
+    font-size: 36px;
+}
+
+p {
+    color: "black";
+    font-size: 12px;
+}
