@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 body, html {
     font-family: 'Arial', 'Helvetica', sans-serif;
     color: black;
@@ -31,3 +32,111 @@ img {
     padding: 10px 15px;
     text-decoration: none;
 }
+=======
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+header h1 {
+  padding: 20px 0;
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+}
+
+nav#side-menu {
+  float: left;
+  width: 20%;
+  background: #333;
+  color: #fff;
+}
+
+nav#side-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav#side-menu ul li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #fff;
+  border-bottom: 1px solid #444;
+}
+
+nav#side-menu ul li a.active,
+nav#side-menu ul li a:hover {
+  background: #555;
+}
+
+section#profile-settings {
+  float: right;
+  width: 75%;
+}
+
+h2 {
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  color: #666;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="password"],
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.save-btn,
+.cancel-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.save-btn {
+  background-color: #5cb85c;
+  color: #fff;
+}
+
+.cancel-btn {
+  background-color: #d9534f;
+  color: #fff;
+}
+
+
+
+  nav#side-menu,
+  section#profile-settings {
+    float: none;
+    width: 100%;
+  }
+
+  nav#side-menu ul li a {
+    padding: 15px;
+    text-align: center;
+  }
+>>>>>>> Stashed changes
