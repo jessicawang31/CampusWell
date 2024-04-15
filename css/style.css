@@ -140,3 +140,27 @@ h2 {
     text-align: center;
   }
 >>>>>>> Stashed changes
+.container {
+  margin-top:15%;
+  margin-left: 35%;
+  background-color: lightblue;
+  border: 3px solid lightcyan;
+  width: 20%;
+  padding: .5rem;
+  padding-bottom: 50px;
+}
+
+
+header {
+  font-size: 20px;
+  justify-content: center;
+}
+
+.login {
+  justify-content: center;
+  margin: 10%;
+}
+
+body {
+  background-color: black;
+}
