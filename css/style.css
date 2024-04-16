@@ -160,3 +160,30 @@ header {
   justify-content: center;
   margin: 10%;
 }
+
+.boxes{
+  display: flex;
+  align-items: flex-start;
+  margin: 20px;
+  padding: 15px;
+  gap: 6rem;
+}
+
+.notes-container, .info-container {
+  flex: 1;
+  padding:10px;
+  margin: 15px;
+  border: 1px solid black;
+}
+
+.history-container {
+  flex: 0 0 10%;
+  padding:10px;
+  margin: 15px;
+  border: 1px solid black;
+}
+
+.past-appointments {
+  padding: 0;
+  margin: 0;
+}
