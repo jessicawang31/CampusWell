@@ -3,7 +3,7 @@ body, html {
     color: black;
 }
 
-img {
+.map-img {
     width: 100%;
     height: 100%;
 }
@@ -137,7 +137,11 @@ h2 {
     padding: 15px;
     text-align: center;
   }
+<<<<<<< HEAD
 .container {
+=======
+.introcontainer {
+>>>>>>> refs/remotes/origin/main
   margin-top:15%;
   margin-left: 35%;
   background-color: lightblue;
@@ -147,13 +151,78 @@ h2 {
   padding-bottom: 50px;
 }
 
-
 header {
   font-size: 20px;
   justify-content: center;
 }
 
 .login {
-  justify-content: center;
+  text-align: center;
   margin: 10%;
+}
+h1 {
+  margin-bottom: 0;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.text-side {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.image-side {
+  flex: 1;
+}
+
+.home-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.submitbutton {
+  margin-top: 1rem;
+}
+
+.text-small {
+  font-size: 12px;
+}
+
+.entryboxes label[for="email_input"] b {
+  text-align: left;
+}
+
+.boxes{
+  display: flex;
+  align-items: flex-start;
+  margin: 20px;
+  padding: 15px;
+  gap: 6rem;
+}
+
+.notes-container, .info-container {
+  flex: 1;
+  padding:10px;
+  margin: 15px;
+  border: 1px solid black;
+}
+
+.history-container {
+  flex: 0 0 10%;
+  padding:10px;
+  margin: 15px;
+  border: 1px solid black;
+}
+
+.past-appointments {
+  padding: 0;
+  margin: 0;
 }
