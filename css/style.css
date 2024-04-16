@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 body, html {
     font-family: 'Arial', 'Helvetica', sans-serif;
     color: black;
@@ -32,7 +31,6 @@ body, html {
     padding: 10px 15px;
     text-decoration: none;
 }
-=======
 body {
   font-family: 'Arial', sans-serif;
   background-color: #f4f4f4;
@@ -139,8 +137,7 @@ h2 {
     padding: 15px;
     text-align: center;
   }
->>>>>>> Stashed changes
-.container {
+.introcontainer {
   margin-top:15%;
   margin-left: 35%;
   background-color: lightblue;
@@ -150,14 +147,13 @@ h2 {
   padding-bottom: 50px;
 }
 
-
 header {
   font-size: 20px;
   justify-content: center;
 }
 
 .login {
-  justify-content: center;
+  text-align: center;
   margin: 10%;
 }
 h1 {
@@ -186,4 +182,43 @@ h2 {
 .home-img {
   max-width: 100%;
   height: auto;
+}
+
+.submitbutton {
+  margin-top: 1rem;
+}
+
+.text-small {
+  font-size: 12px;
+}
+
+.entryboxes label[for="email_input"] b {
+  text-align: left;
+}
+
+.boxes{
+  display: flex;
+  align-items: flex-start;
+  margin: 20px;
+  padding: 15px;
+  gap: 6rem;
+}
+
+.notes-container, .info-container {
+  flex: 1;
+  padding:10px;
+  margin: 15px;
+  border: 1px solid black;
+}
+
+.history-container {
+  flex: 0 0 10%;
+  padding:10px;
+  margin: 15px;
+  border: 1px solid black;
+}
+
+.past-appointments {
+  padding: 0;
+  margin: 0;
 }
