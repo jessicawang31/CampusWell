@@ -156,8 +156,10 @@ header {
   text-align: center;
   margin: 10%;
 }
+
 h1 {
   margin-bottom: 0;
+  margin-left: 20px;
 }
 
 h2 {
