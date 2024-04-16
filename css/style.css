@@ -137,11 +137,7 @@ h2 {
     padding: 15px;
     text-align: center;
   }
-<<<<<<< HEAD
-.container {
-=======
 .introcontainer {
->>>>>>> refs/remotes/origin/main
   margin-top:15%;
   margin-left: 35%;
   background-color: lightblue;
@@ -225,4 +221,8 @@ h2 {
 .past-appointments {
   padding: 0;
   margin: 0;
+}
+
+.blankImage{
+    
 }
