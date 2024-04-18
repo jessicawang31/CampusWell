@@ -259,3 +259,19 @@ header {
     width:fit-content;
   }
 }
+
+
+@media (min-width: 1000px) {
+  .intromain {
+    width:fit-content;
+    height: 100%;
+    padding-bottom: 100%;
+    align-items: center;
+  }
+  .introfooter {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+}
