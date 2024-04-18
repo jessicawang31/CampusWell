@@ -151,16 +151,16 @@ h2 {
 
 
 
-  nav#side-menu,
-  section#profile-settings {
-    float: none;
-    width: 100%;
-  }
+nav#side-menu,
+section#profile-settings {
+  float: none;
+  width: 100%;
+}
 
-  nav#side-menu ul li a {
-    padding: 15px;
-    text-align: center;
-  }
+nav#side-menu ul li a {
+  padding: 15px;
+  text-align: center;
+}
 
 /* nicolas  */
 
