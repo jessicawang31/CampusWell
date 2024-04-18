@@ -172,16 +172,21 @@ h2 {
   padding-left: 0.5rem;
 }
 
+.introh2 {
+  color: white;
+  font-size: 3rem;
+  margin: 0;
+}
 
 .intromain {
+  border: 3px solid gray;
   color: white;
   background-color: black;
-  border: 3px solid green;
-  width: 20%;
-  padding: .5rem;
-  padding-bottom: 50px;
+  width: 35%;
+  padding: 1rem;
+  padding-bottom: 20rem;
   text-align: center;
-  margin: 10%;
+  margin: auto;
 }
 
 .introfooter {
@@ -209,12 +214,11 @@ header {
 }
 
 .text-small {
-  font-size: 12px;
+  font-size: 1rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
 }
 
-.entryboxes label[for="email_input"] b {
-  text-align: left;
-}
 
 
 /* nicolas ^^^^ */
@@ -248,4 +252,10 @@ header {
 
 .blankImage image{
     width: 30;
+}
+
+@media (max-width: 430px) {
+  .intromain {
+    width:fit-content;
+  }
 }
