@@ -48,7 +48,6 @@ body, html {
 
 h1 {
   margin-bottom: 0;
-  margin-left: 20px;
 }
 
 h2 {
@@ -70,35 +69,11 @@ body {
 }
 
 header h1 {
-  padding: 20px 0;
+  padding: 50;
   text-align: center;
   background-color: #333;
   color: #fff;
-}
-
-nav#side-menu {
-  float: left;
-  width: 20%;
-  background: #333;
-  color: #fff;
-}
-
-nav#side-menu ul {
-  list-style: none;
-  padding: 0;
-}
-
-nav#side-menu ul li a {
-  display: block;
-  padding: 10px;
-  text-decoration: none;
-  color: #fff;
-  border-bottom: 1px solid #444;
-}
-
-nav#side-menu ul li a.active,
-nav#side-menu ul li a:hover {
-  background: #555;
+  width: 100%;
 }
 
 section#profile-settings {
@@ -148,19 +123,6 @@ h2 {
   background-color: #d9534f;
   color: #fff;
 }
-
-
-
-  nav#side-menu,
-  section#profile-settings {
-    float: none;
-    width: 100%;
-  }
-
-  nav#side-menu ul li a {
-    padding: 15px;
-    text-align: center;
-  }
 
 /* nicolas  */
 
