@@ -31,6 +31,30 @@ body, html {
     padding: 10px 15px;
     text-decoration: none;
 }
+
+.text-side {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.image-side {
+  flex: 1;
+}
+
+.home-img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1 {
+  margin-bottom: 0;
+  margin-left: 20px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
 body {
   font-family: 'Arial', sans-serif;
   background-color: #f4f4f4;
@@ -137,14 +161,39 @@ h2 {
     padding: 15px;
     text-align: center;
   }
-.introcontainer {
-  margin-top:15%;
-  margin-left: 35%;
-  background-color: lightblue;
-  border: 3px solid lightcyan;
-  width: 20%;
-  padding: .5rem;
-  padding-bottom: 50px;
+
+/* nicolas  */
+
+.introheader, .introh1 {
+  background-color: black;
+  color: white;
+  text-align: left;
+  margin: 0;
+  padding-left: 0.5rem;
+}
+
+.introh2 {
+  color: white;
+  font-size: 3rem;
+  margin: 0;
+}
+
+.intromain {
+  border: 3px solid gray;
+  color: white;
+  background-color: black;
+  width: 35%;
+  padding: 1rem;
+  padding-bottom: 20rem;
+  text-align: center;
+  margin: auto;
+}
+
+.introfooter {
+  padding: 1rem;
+  padding-bottom: 8px;
+  background-color: black;
+  color: white;
 }
 
 header {
@@ -152,19 +201,7 @@ header {
   justify-content: center;
 }
 
-.login {
-  text-align: center;
-  margin: 10%;
-}
 
-h1 {
-  margin-bottom: 0;
-  margin-left: 20px;
-}
-
-h2 {
-  margin-top: 0;
-}
 
 .content-container {
   display: flex;
@@ -172,31 +209,19 @@ h2 {
   padding: 20px;
 }
 
-.text-side {
-  flex: 1;
-  padding-right: 20px;
-}
-
-.image-side {
-  flex: 1;
-}
-
-.home-img {
-  max-width: 100%;
-  height: auto;
-}
-
 .submitbutton {
   margin-top: 1rem;
 }
 
 .text-small {
-  font-size: 12px;
+  font-size: 1rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
 }
 
-.entryboxes label[for="email_input"] b {
-  text-align: left;
-}
+
+
+/* nicolas ^^^^ */
 
 .boxes{
   display: flex;
@@ -227,4 +252,10 @@ h2 {
 
 .blankImage image{
     width: 30;
+}
+
+@media (max-width: 430px) {
+  .intromain {
+    width:fit-content;
+  }
 }

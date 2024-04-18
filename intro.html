@@ -8,24 +8,39 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-    <div class="introcontainer">
-        <header>
-            <h1>aaaaaaaaaa</h1>
+    <div class="introflex">
+        <header class="introheader">
+            <h1 class="introh1">CampusWell</h1>
         </header>
-        <section class="login">
-            <form>
-                <h2 class="text-small">Don't have an account? <a href="www.example.com">Sign Up!</a></h2>
-                <div class="entryboxes">
-                    <label for="email_input">
-                        <b>Email:</b><br>
-                    </label><input id="email_input" type="email" name="email" placeholder="email@domain.com"><br>
-                    <label for="password_input">
-                        <b>Password:</b><br>
-                    </label><input id="password_input" type="password" name="password" placeholder="******">
-                </div>
-                <button class="submitbutton" aria-label="Submit" type="submit"><a href="home.html">Log In</a></button>
-            </form>
-        </section>
+        <main>
+            <div class="intromain">
+                <section class="login">
+                    <h2 class="introh2">Log in to CampusWell</h2>
+                    <h2 class="text-small introh2">Don't have an account? <a href="https://example.com/">Sign Up!</a></h2>
+                    <form>
+                        <div class="entryboxes">
+                            <label for="email_input" class="titles">
+                                <b>Email:</b><br>
+                            </label><input id="email_input" type="email" name="email" placeholder="email@domain.com"><br>
+                            <label for="password_input" class="titles">
+                                <b>Password:</b><br>
+                            </label><input id="password_input" type="password" name="password" placeholder="******">
+                        </div>
+                        <button class="submitbutton" aria-label="Submit" type="submit"><a href="index.html">Log In</a></button>
+                    </form>
+                </section>
+                <section class="loginsources">
+
+                </section>
+            </div>
+        </main>
+        <!-- footer -->
+        <footer class="introfooter">
+            <address>
+            Contact us at <a href="mailto:nico0421@uw.edu">nico0421@uw.edu</a>, or at <a href="tel:509-733-4438">(509) 733-4438</a>.
+            </address>
+            <p>&copy; 2024 CampusWell.</p>
+        </footer>
     </div>
 </body>
 </html>
