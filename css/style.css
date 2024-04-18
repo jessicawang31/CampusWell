@@ -216,13 +216,24 @@ header {
     width: 30;
 }
 
+/* iPhone Pro Max */
 @media (max-width: 430px) {
   .intromain {
     width:fit-content;
+    height: 100%;
+    padding-bottom: 100%;
+    align-items: center;
+  }
+
+  .introfooter {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
   }
 }
 
-
+/* iPad Pro*/
 @media (min-width: 1000px) {
   .intromain {
     width:fit-content;
