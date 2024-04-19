@@ -72,6 +72,11 @@ h2 {
   color: #333;
 }
 
+footer {
+  padding: 1rem;
+  padding-bottom: 8px;
+}
+
 /* home styling */
 
 
@@ -232,7 +237,14 @@ section#profile-settings {
 
   .introfooter {
     text-align: center;
-    position: fixed;
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+  }
+
+  footer {
+    text-align: center;
+    /* position: fixed; */
     bottom: 0;
     width: 100%;
   }
@@ -246,9 +258,17 @@ section#profile-settings {
     padding-bottom: 100%;
     align-items: center;
   }
+
   .introfooter {
     text-align: center;
-    position: fixed;
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+  }
+
+  footer {
+    text-align: center;
+    /* position: fixed; */
     bottom: 0;
     width: 100%;
   }
