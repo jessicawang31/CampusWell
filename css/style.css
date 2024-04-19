@@ -1,3 +1,4 @@
+/* jessica - map styling */
 body, html {
     font-family: 'Arial', 'Helvetica', sans-serif;
     color: black;
@@ -32,6 +33,11 @@ body, html {
     text-decoration: none;
 }
 
+/* map styling */
+
+
+/* jessica - home styling */
+
 .text-side {
   flex: 1;
   padding-right: 20px;
@@ -46,27 +52,40 @@ body, html {
   height: auto;
 }
 
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
 h1 {
   margin-bottom: 0;
+  margin-left: 20px;
 }
 
 h2 {
   margin-top: 0;
+  color: #333;
 }
 
+/* home styling */
+
+
+/* nat - profile styling */
+
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Arial', 'Helvetica', sans-serif;
   background-color: #f4f4f4;
   margin: 0;
   padding: 0;
   color: #333;
 }
 
-.container {
+/* .container {
   width: 80%;
   margin: auto;
   overflow: hidden;
-}
+} */
 
 header h1 {
   padding: 50;
@@ -79,10 +98,6 @@ header h1 {
 section#profile-settings {
   float: right;
   width: 75%;
-}
-
-h2 {
-  color: #333;
 }
 
 .form-group {
@@ -112,19 +127,21 @@ h2 {
   border-radius: 5px;
   cursor: pointer;
   margin-right: 5px;
+  color: #fff;
 }
 
 .save-btn {
   background-color: #5cb85c;
-  color: #fff;
 }
 
 .cancel-btn {
   background-color: #d9534f;
-  color: #fff;
 }
 
-/* nicolas  */
+/* profile styling */
+
+
+/* nicolas - intro page */
 
 .introheader, .introh1 {
   background-color: black;
@@ -163,14 +180,6 @@ header {
   justify-content: center;
 }
 
-
-
-.content-container {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-}
-
 .submitbutton {
   margin-top: 1rem;
 }
@@ -181,10 +190,9 @@ header {
   padding-top: 1rem;
 }
 
+/* intro styling */
 
-
-/* nicolas ^^^^ */
-
+/* philip - tracker styling */
 .boxes{
   display: flex;
   align-items: flex-start;
@@ -215,6 +223,9 @@ header {
 .blankImage image{
     width: 30;
 }
+
+/* tracker styling */
+
 
 /* iPhone Pro Max */
 @media (max-width: 430px) {
