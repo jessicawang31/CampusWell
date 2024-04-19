@@ -12,12 +12,16 @@ body, html {
 .functions {
     display: flex;
     align-items: center;
-    gap: 10px; /* space between search and filter containers */
 }
 
-.search-container, .filter-container, .navbar-container {
+.search-container, .filter-container, .navbar-container, .search-container button {
     display: flex;
     align-items: center;
+}
+
+.search-container button img {
+  width: 20px;
+  height: auto;
 }
 
 .navbar {
@@ -74,30 +78,24 @@ h2 {
 /* nat - profile styling */
 
 body {
-  font-family: 'Arial', 'Helvetica', sans-serif;
   background-color: #f4f4f4;
   margin: 0;
   padding: 0;
-  color: #333;
 }
 
-/* .container {
-  width: 80%;
-  margin: auto;
-  overflow: hidden;
-} */
-
-header h1 {
-  padding: 50;
+header {
+  padding: 0;
   text-align: center;
   background-color: #333;
   color: #fff;
   width: 100%;
+  font-size: 20px;
+  justify-content: center;
 }
 
 section#profile-settings {
-  float: right;
-  width: 75%;
+  width: 100%;
+  margin-left: 30px;
 }
 
 .form-group {
@@ -149,6 +147,7 @@ section#profile-settings {
   text-align: left;
   margin: 0;
   padding-left: 0.5rem;
+  justify-content: center;
 }
 
 .introh2 {
@@ -173,11 +172,6 @@ section#profile-settings {
   padding-bottom: 8px;
   background-color: black;
   color: white;
-}
-
-header {
-  font-size: 20px;
-  justify-content: center;
 }
 
 .submitbutton {
@@ -220,7 +214,7 @@ header {
   margin: 0;
 }
 
-.blankImage image{
+.blankImage {
     width: 30;
 }
 

@@ -3,8 +3,10 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Interactive Map</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name="author" content="Jessica Wang">
+    <meta name="description" content="This is the interactive map page the user will find health resources on">
+    <title>Interactive Map</title>
     <!-- normalize.css for cross-browser stuff -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -24,7 +26,9 @@
         <div class="functions">
             <div class="search-container">
                 <input type="text" id="searchInput" placeholder="Search" onclick="toggleSearch()">
-                <button onclick="performSearch()">🔍</button>
+                <!-- <button onclick="performSearch()">🔍</button> -->
+                <button onclick="performSearch()"><img src="img/search.png" alt="Search"></button>
+
             </div>
             <div class="filter-container">
                 <select id="filter" multiple onchange="applyFilter()">
