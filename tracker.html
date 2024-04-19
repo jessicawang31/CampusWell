@@ -23,31 +23,36 @@
         </nav>
     </div>
     <main>
-    <div class="boxes">
-        <section class="history-container">
-            <h2>History</h2>
-            <div class="past-appointments">
-                <select id="appointments" multiple onchange="applyFilter()">
-                    <option value="appointment">Dentist Visit (Yesterday)</option>
-                    <option value="appointment">Yearly-Checkup (02/20/24)</option>
-                </select>
-            </div>
-        </section>
-        <section class="notes-container">
-            <h2>Appointment Notes</h2>
-            <p>No notes entered</p>
-        </section>
-        <section class="info-container">
-            <h2>Place</h2>
-            <p>information such as image, location, time of appointment, and type of service</p>
-        </section>
-    </div>
+        <div class="boxes">
+            <section class="history-container">
+                <h2>History</h2>
+                <div class="past-appointments">
+                    <select id="appointments" multiple onchange="applyFilter()">
+                        <option value="appointment">Dentist Visit (Yesterday)</option>
+                        <option value="appointment">Yearly-Checkup (02/20/24)</option>
+                    </select>
+                </div>
+            </section>
+            <section class="notes-container">
+                <h2>Appointment Notes</h2>
+                <p>No notes entered</p>
+            </section>
+            <section class="info-container">
+                <h2>Place</h2>
+                <p>information such as image, location, time of appointment, and type of service</p>
+            </section>
+        </div>
     </main>
-    <footer class="footer">
-        <address>
-        Contact us at <a href="mailto:pleon@uw.edu">pleon@uw.edu</a>, or at <a href="tel:XXXXXXXXXX">(XXXXXXXXXX)</a>.
-        </address>
-        <p>&copy; 2024 CampusWell.</p>
-      </footer>
+
+    <div class="footercontainer">
+        <div class="footercontent">
+            <footer class="footer">
+                <address>
+                Contact us at <a href="mailto:pleon@uw.edu">pleon@uw.edu</a>, or at <a href="tel:XXXXXXXXXX">(XXXXXXXXXX)</a>.
+                </address>
+                <p>&copy; 2024 CampusWell.</p>
+            </footer>
+        </div>
+    </div>
 </body>
 </html>
