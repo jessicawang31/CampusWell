@@ -22,23 +22,25 @@
             <div class="nav-button"><a href="Profile-Account Settings.html">Profile</a></div>
         </nav>
     </div>
-    <div class="map-container">
-        <div class="functions">
-            <div class="search-container">
-                <input type="text" id="searchInput" placeholder="Search" onclick="toggleSearch()">
-                <button onclick="performSearch()"><img src="img/search.png" alt="Search"></button>
-
+    <main>
+        <div class="map-container">
+            <div class="functions">
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search" onclick="toggleSearch()">
+                    <button onclick="performSearch()"><img src="img/search.png" alt="Search"></button>
+    
+                </div>
+                <div class="filter-container">
+                    <select id="filter" multiple onchange="applyFilter()">
+                        <option value="all">All</option>
+                        <option value="Payment">Payment Options</option>
+                        <option value="Services">Services</option>
+                    </select>
+                </div>
             </div>
-            <div class="filter-container">
-                <select id="filter" multiple onchange="applyFilter()">
-                    <option value="all">All</option>
-                    <option value="Payment">Payment Options</option>
-                    <option value="Services">Services</option>
-                </select>
-            </div>
+            <img class="map-img" src="img/map.png" alt="Map" class="map-image">
         </div>
-        <img class="map-img" src="img/map.png" alt="Map" class="map-image">
-    </div>
+    </main>
 
     <div class="footercontainer">
         <div class="footercontent">

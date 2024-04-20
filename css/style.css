@@ -6,9 +6,14 @@ body, html {
     margin: 0;
 }
 
+main, .text, .content-container, .boxes {
+  display: flex;
+  min-height: 100%;
+}
+
 .map-img {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: auto;
 }
 
 .functions {
@@ -72,11 +77,6 @@ h1 {
 h2 {
   margin-top: 0;
   color: #333;
-}
-
-footer {
-  padding: 1rem;
-  padding-bottom: 8px;
 }
 
 /* home styling */
@@ -175,10 +175,10 @@ section#profile-settings {
 }
 
 .introfooter {
-  padding: 1rem;
-  padding-bottom: 8px;
   background-color: black;
   color: white;
+  margin-top: auto;
+  padding: 1rem;
 }
 
 .submitbutton {
@@ -197,32 +197,34 @@ section#profile-settings {
 .boxes{
   display: flex;
   align-items: flex-start;
+  justify-content: space-evenly;
+  flex-grow: 1;
+  width: fit-content;
   margin: 20px;
   padding: 15px;
-  gap: 6rem;
 }
 
 .notes-container, .info-container {
   flex: 1;
-  padding:10px;
+  padding: 20px;
   margin: 15px;
   border: 1px solid black;
 }
 
 .history-container {
-  flex: 0 0 10%;
-  padding:10px;
+  flex: 0 0 5%;
+  padding: 20px;
   margin: 15px;
   border: 1px solid black;
 }
 
 .past-appointments {
-  padding: 0;
-  margin: 0;
+  padding: 5px;
+  margin: 5px;
 }
 
 .blankImage {
-    width: 30;
+  width: 30;
 }
 
 /* tracker styling */
@@ -230,14 +232,14 @@ section#profile-settings {
 /* footer flex */
 .introfooter, .footer {
   text-align: center;
-  bottom: 0;
   width: 100%;
 }
 
 .footercontainer, .introfootercontainer {
   display: flex;
+  max-width: 100%;
+  margin-top: auto;
   flex-direction: column;
-  min-height: 100vh;
 }
 
 .footercontent, .introfootercontent {
@@ -248,23 +250,32 @@ section#profile-settings {
 /* iPhone Pro Max */
 @media (max-width: 430px) {
   .intromain {
+    display: flex;
     width:fit-content;
     height: 100%;
     padding-bottom: 100%;
     align-items: center;
   }
 
-  .introfooter, .footer {
-    text-align: center;
-    bottom: 0;
-    width: 100%;
+  .boxes {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
   }
+
 }
 
 /* iPad Pro*/
 @media (min-width: 1000px) {
+
+  .text-small, body {
+    font-size: 1.5rem;
+  }
+
   .intromain {
+    font-size: 36px;
     width:fit-content;
+    margin: auto;
     height: 100%;
     padding-bottom: 100%;
     align-items: center;
@@ -272,7 +283,7 @@ section#profile-settings {
 
   .introfooter, .footer {
     text-align: center;
-    bottom: 0;
+    margin-top: auto;
     width: 100%;
   }
 }
