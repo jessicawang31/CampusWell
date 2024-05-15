@@ -1,0 +1,13 @@
+  .introfooter, .footer {
+    text-align: center;
+    width: 100%;
+  }
+
+  .footercontent, .introfootercontent {
+    flex: 1;
+  }
+
+  .introfooter, .footer {
+    text-align: center;
+    width: 100%;
+  }
