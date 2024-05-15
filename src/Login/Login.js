@@ -2,7 +2,7 @@ import React from "react";
 import NavBar from './NavBar'; 
 import { Footer } from "../components/Footer";
 
-export function Login() {
+export default function Login() {
     return (
         <div className="introflex">
             <header className="introheader">

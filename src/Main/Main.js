@@ -1,7 +1,8 @@
 import React from 'react';
 import { NavBar } from '../components/NavBar';
+import { Footer } from '../components/Footer';
 
-export function Main() {
+export default function Main() {
   return (
     <div className="main-container">
         <NavBar />
