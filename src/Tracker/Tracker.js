@@ -7,7 +7,6 @@ import '../index.css';
 export default function TrackerHistory() {
     return (
         <div>
-            <NavBar/>
             <header>
                 <h1>Tracker History</h1>
             </header>

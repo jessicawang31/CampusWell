@@ -7,7 +7,6 @@ import '../index.css';
 export default function Main() {
   return (
     <div className="main-container">
-        <NavBar />
         <h1>Campus Well</h1>
         <div className="content-container">
             <div className="text-side">

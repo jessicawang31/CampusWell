@@ -7,7 +7,6 @@ import '../index.css';
 export default function AccountSettings() {
   return (
     <div>
-      <NavBar />
       <header>
         <h1>Account Settings</h1>
       </header>

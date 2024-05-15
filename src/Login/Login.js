@@ -23,7 +23,7 @@ export default function Login() {
                                     <b>Password:</b><br />
                                 </label><input id="password_input" type="password" name="password" placeholder="******" />
                             </div>
-                            <button className="submitbutton" aria-label="Submit" type="submit"><a href="index.html">Log In</a></button>
+                            <button className="submitbutton" aria-label="Submit" type="submit"><Link to="/main">Main</Link></button>
                         </form>
                     </section>
                 </div>

@@ -1,29 +1,31 @@
-// function App() {
-//   return <div className="">Hello World</div>
-// }
-// export default App;
-
 import React from 'react';
-// import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link} from 'react-router-dom'
 import Login from './Login/Login.js';
 import Main from './Main/Main.js';
 import Map from './Map/Map.js';
 import TrackerHistory from './Tracker/Tracker.js';
 import AccountSettings from './ProfileAccount/ProfileAccount';
-// import NavBar from './components';
-// import Footer from './components';
+
+import NavBar from './components/NavBar.js';
 
 function App() {
   return (
-    <div>
-      {/* <NavBar /> */}
-      <Login />
-      <Main />
-      <Map />
-      <TrackerHistory />
-      <AccountSettings />
-      {/* <Footer /> */}
-    </div>
+    <BrowserRouter>
+      <div>     
+        <NavBar />
+
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/main" element={<Main />} />
+          <Route path="/map" element={<Map />} />
+          <Route path="/tracker" element={<TrackerHistory />} />
+          <Route path="/account" element={<AccountSettings />} />
+          {/* Add a default route if you want, like redirecting to /main */}
+          {/* <Route path="/" element={<Main />} /> */}
+        </Routes>
+
+      </div>
+    </BrowserRouter>
   );
 }
 
