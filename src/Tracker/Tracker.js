@@ -1,5 +1,5 @@
 import React from 'react';
-import NavBar from './NavBar'; 
+import NavBar from '../components/NavBar.js'; 
 
 export default function TrackerHistory() {
     return (
@@ -13,7 +13,8 @@ export default function TrackerHistory() {
                     <section className="history-container">
                     <h2>History</h2>
                     <div className="past-appointments">
-                        <select id="appointments" multiple onChange={applyFilter}>
+                        {/* <select id="appointments" multiple onChange={applyFilter}> */}
+                        <select id="appointments">
                             <option value="appointment">Dentist (3/1/24)</option>
                             <option value="appointment">Checkup (2/5/24)</option>
                         </select>

@@ -1,6 +1,6 @@
 import React from 'react';
-import { NavBar } from '../components/NavBar';
-import { Footer } from '../components/Footer';
+import NavBar from '../components/NavBar.js';
+import Footer from '../components/Footer.js';
 
 export default function Map() {
     return (
@@ -10,7 +10,7 @@ export default function Map() {
                 <div className="functions">
                     <div className="search-container">
                         <input type="text" id="searchInput" placeholder="Search" />
-                        <button><img src="img/search.png" alt="Search" /></button>
+                        <button><img src="./img/search.png" alt="Search" /></button>
                     </div>
                     <div className="filter-container">
                         <select id="filter" multiple>

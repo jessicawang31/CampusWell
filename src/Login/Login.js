@@ -1,6 +1,6 @@
 import React from "react";
-import NavBar from './NavBar'; 
-import { Footer } from "../components/Footer";
+import NavBar from '../components/NavBar.js'; 
+import Footer from "../components/Footer.js";
 
 export default function Login() {
     return (

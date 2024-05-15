@@ -1,5 +1,5 @@
 import React from 'react';
-import NavBar from './NavBar'; 
+import NavBar from '../components/NavBar.js'; 
 
 export default function AccountSettings() {
   return (
@@ -11,7 +11,7 @@ export default function AccountSettings() {
       <main>
         <section id="profile-settings">
           <h2>Edit Profile</h2>
-          <img className="blankImage" src="img/blank profile.png" alt="a blank profile" />
+          <img className="blankImage" src="../img/blank profile.png" alt="a blank profile" />
           <form id="profile-form">
             <div className="form-group">
               <label htmlFor="first-name">First Name</label>
