@@ -1,5 +1,6 @@
 import React from 'react';
-import NavBar from './NavBar'; 
+import NavBar from '../components/NavBar.js'; 
+import Footer from '../components/Footer.js'; 
 
 export default function AccountSettings() {
   return (
@@ -11,7 +12,7 @@ export default function AccountSettings() {
       <main>
         <section id="profile-settings">
           <h2>Edit Profile</h2>
-          <img className="blankImage" src="img/blank profile.png" alt="a blank profile" />
+          <img className="blankImage" src="../img/blank profile.png" alt="a blank profile" />
           <form id="profile-form">
             <div className="form-group">
               <label htmlFor="first-name">First Name</label>
@@ -60,16 +61,7 @@ export default function AccountSettings() {
           </form>
         </section>
       </main>
-      <div className="footercontainer">
-        <div className="footercontent">
-          <footer className="footer">
-            <address>
-              Contact us at <a href="mailto:ntabera@uw.edu">ntabera@uw.edu</a>, or at <a href="tel:XXXXXXXXXX">(XXXXXXXXXX)</a>.
-            </address>
-            <p>&copy; 2024 CampusWell.</p>
-          </footer>
-        </div>
-      </div>
+      <Footer />
     </div>
   );
 }

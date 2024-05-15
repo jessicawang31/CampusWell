@@ -5,13 +5,13 @@
 
 import React from 'react';
 // import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { Login } from './Login';
-import { Main } from './Main';
-import { Map } from './Map';
-import { TrackerHistory } from './Tracker';
-import { AccountSettings } from './ProfileAccount';
-import { NavBar } from './components';
-import { Footer } from './components';
+import Login from './Login/Login.js';
+import Main from './Main/Main.js';
+import Map from './Map/Map.js';
+import TrackerHistory from './Tracker/Tracker.js';
+import AccountSettings from './ProfileAccount/ProfileAccount';
+// import NavBar from './components';
+// import Footer from './components';
 
 function App() {
   return (
