@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // function App() {
 //   return <div className="">Hello World</div>
 // }
@@ -12,6 +13,10 @@ import { TrackerHistory } from './Tracker';
 import { AccountSettings } from './ProfileAccount';
 import { NavBar } from './components';
 import { Footer } from './components';
+=======
+import './index.css';
+
+>>>>>>> ad896c917effdf714138bc5b928da324594b54c1
 
 function App() {
   return (
