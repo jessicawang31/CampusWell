@@ -3,3 +3,15 @@
     display: flex; 
     width: 100%;
 }
+
+.navbar-container{
+    display: flex;
+    align-items: center;
+}
+
+.nav-button a {
+    display: inline-block;
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+}
