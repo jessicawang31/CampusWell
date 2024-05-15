@@ -1,5 +1,6 @@
 import React from 'react';
 import NavBar from '../components/NavBar.js'; 
+import Footer from '../components/Footer.js'; 
 
 export default function AccountSettings() {
   return (
@@ -60,16 +61,7 @@ export default function AccountSettings() {
           </form>
         </section>
       </main>
-      <div className="footercontainer">
-        <div className="footercontent">
-          <footer className="footer">
-            <address>
-              Contact us at <a href="mailto:ntabera@uw.edu">ntabera@uw.edu</a>, or at <a href="tel:XXXXXXXXXX">(XXXXXXXXXX)</a>.
-            </address>
-            <p>&copy; 2024 CampusWell.</p>
-          </footer>
-        </div>
-      </div>
+      <Footer />
     </div>
   );
 }

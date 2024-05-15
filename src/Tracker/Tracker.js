@@ -1,5 +1,6 @@
 import React from 'react';
 import NavBar from '../components/NavBar.js'; 
+import Footer from '../components/Footer.js'; 
 
 export default function TrackerHistory() {
     return (
@@ -34,16 +35,8 @@ export default function TrackerHistory() {
                     </section>
                 </div>
             </main>
-            <div className="footercontainer">
-                <div className="footercontent">
-                    <footer className="footer">
-                    <address>
-                        Contact us at <a href="mailto:pleon@uw.edu">ntabera@uw.edu</a>, or at <a href="tel:XXXXXXXXXX">(XXXXXXXXXX)</a>.
-                    </address>
-                    <p>&copy; 2024 CampusWell.</p>
-                </footer>
-            </div>
+            <Footer />
         </div>
-    </div>
+    // </div>
     );
 }
