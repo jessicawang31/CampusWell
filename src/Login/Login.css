@@ -1,0 +1,99 @@
+.introheader, .introh1 {
+    background-color: black;
+    color: white;
+    text-align: left;
+    margin: 0;
+    padding-left: 0.5rem;
+    justify-content: center;
+  }
+  
+  .introh2 {
+    color: white;
+    font-size: 3rem;
+    margin: 0;
+  }
+  
+  .intromain {
+    border: 3px solid gray;
+    color: white;
+    background-color: black;
+    width: 35%;
+    padding: 1rem;
+    padding-bottom: 20rem;
+    text-align: center;
+    margin: auto;
+  }
+  
+  .introfooter {
+    background-color: black;
+    color: white;
+    margin-top: auto;
+    padding: 1rem;
+  }
+  
+  .submitbutton {
+    margin-top: 1rem;
+  }
+  
+  .text-small {
+    font-size: 1rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
+  .introfooter, .footer {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .footercontainer, .introfootercontainer {
+    display: flex;
+    max-width: 100%;
+    margin-top: auto;
+    flex-direction: column;
+  }
+  
+  .footercontent, .introfootercontent {
+    flex: 1;
+  }
+  /* footer flex */
+  
+  /* iPhone Pro Max */
+  @media (max-width: 430px) {
+    .intromain {
+      display: flex;
+      width:fit-content;
+      height: 100%;
+      padding-bottom: 100%;
+      align-items: center;
+    }
+  
+    .boxes {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+  
+  }
+  
+  /* iPad Pro*/
+  @media (min-width: 1000px) {
+  
+    .text-small, body {
+      font-size: 1.5rem;
+    }
+  
+    .intromain {
+      font-size: 36px;
+      width:fit-content;
+      margin: auto;
+      height: 100%;
+      padding-bottom: 100%;
+      align-items: center;
+    }
+  
+    .introfooter, .footer {
+      text-align: center;
+      margin-top: auto;
+      width: 100%;
+    }
+  }
