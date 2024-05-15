@@ -1,6 +1,8 @@
 import React from 'react';
 import NavBar from '../components/NavBar.js';
 import Footer from '../components/Footer.js';
+import './Main.css';
+import '../index.css';
 
 export default function Main() {
   return (

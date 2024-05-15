@@ -1,5 +1,7 @@
 import React from "react";
 import Footer from "../components/Footer.js";
+import './Login.css';
+import '../index.css';
 
 export default function Login() {
     return (
