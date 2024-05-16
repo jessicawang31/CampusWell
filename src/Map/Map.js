@@ -25,7 +25,7 @@ export default function Map() {
                         </select>
                     </div>
                 </div>
-                <img src={mapImg} />
+                <img class="map-img" src={mapImg} />
             </main>
             <Footer />
         </div>
