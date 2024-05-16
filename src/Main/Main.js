@@ -16,7 +16,7 @@ export default function Main() {
                 <p>An information technology problem in the space of the University of Washington is the lack of accessible, navigable health platforms that provide detailed information about available resources on or near campus. These issues could include problems such as real-time appointment availability for urgent care, clarity about insurance coverage vs. out-of-pocket payment options, or more filtered options based on the students health concerns. Students who dont have prior experiences navigating health resources may find it challenging to seek for such support, consequently, this could negatively impact their health further if assistance isnt received in a timely manner.</p>
                 <p>This web app aims to empower students to thrive in all aspects of their university experience by integrating well-being into the fabric of campus life.</p>        </div>
             <div className="image-side">
-                <img className="home-img" src="../img/health.png" alt="Health image" />
+                <img className="home-img" src="/img/health.png" alt="Health image" />
             </div>
         </div>
         <Footer />
