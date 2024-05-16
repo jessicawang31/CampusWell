@@ -12,8 +12,6 @@ function App() {
   return (
     <BrowserRouter>
       <div>     
-        <NavBar />
-
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/main" element={<Main />} />

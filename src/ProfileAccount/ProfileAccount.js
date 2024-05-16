@@ -10,6 +10,7 @@ export default function AccountSettings() {
       <header>
         <h1>Account Settings</h1>
       </header>
+      <NavBar />
       <main>
         <section id="profile-settings">
           <h2>Edit Profile</h2>

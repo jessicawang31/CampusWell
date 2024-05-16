@@ -6,7 +6,9 @@ import '../index.css';
 
 export default function Map() {
     return (
+        
         <div className="map-container">
+            <NavBar />
             <main>
                 <div className="functions">
                     <div className="search-container">

@@ -10,6 +10,7 @@ export default function TrackerHistory() {
             <header>
                 <h1>Tracker History</h1>
             </header>
+            <NavBar />
             <main>
                 <div className="widget-container">
                     <section className="history-container">

@@ -8,6 +8,7 @@ export default function Main() {
   return (
     <div className="main-container">
         <h1>Campus Well</h1>
+        <NavBar />
         <div className="content-container">
             <div className="text-side">
             <h2>Our Goal</h2>
