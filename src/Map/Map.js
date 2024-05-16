@@ -3,6 +3,8 @@ import NavBar from '../components/NavBar.js';
 import Footer from '../components/Footer.js';
 import './Map.css';
 import '../index.css';
+import mapImg from '../img/map.png';
+import searchIcon from '../img/search.png';
 
 export default function Map() {
     return (
@@ -13,7 +15,7 @@ export default function Map() {
                 <div className="functions">
                     <div className="search-container">
                         <input type="text" id="searchInput" placeholder="Search" />
-                        <button><img src="./img/search.png" alt="Search" /></button>
+                        <button><img src={searchIcon} /></button>
                     </div>
                     <div className="filter-container">
                         <select id="filter" multiple>
@@ -23,7 +25,7 @@ export default function Map() {
                         </select>
                     </div>
                 </div>
-                <img className="map-img" src="../img/map.png" alt="Map" />
+                <img src={mapImg} />
             </main>
             <Footer />
         </div>

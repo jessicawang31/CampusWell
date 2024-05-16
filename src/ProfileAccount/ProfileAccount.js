@@ -3,6 +3,7 @@ import NavBar from '../components/NavBar.js';
 import Footer from '../components/Footer.js'; 
 import './ProfileAccount.css';
 import '../index.css';
+import profileImg from '../img/blankprofile.png';
 
 export default function AccountSettings() {
   return (
@@ -14,7 +15,7 @@ export default function AccountSettings() {
       <main>
         <section id="profile-settings">
           <h2>Edit Profile</h2>
-          <img className="blankImage" src="../img/blank profile.png" alt="a blank profile" />
+          <img src={profileImg} />
           <form id="profile-form">
             <div className="form-group">
               <label htmlFor="first-name">First Name</label>
