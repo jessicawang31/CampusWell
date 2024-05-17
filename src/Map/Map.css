@@ -17,3 +17,8 @@
     width: 100%;
     display: block;
 }
+
+h1 {
+    margin-bottom: 0;
+    margin-left: 20px;
+}
