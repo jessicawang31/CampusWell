@@ -19,8 +19,8 @@ function App() {
       <div>     
         <Routes>
           <Route path="/login" element={<Login />} />
-          <Route path="/main" element={<Main locations={allLocations} />} />
-          <Route path="/map" element={<Map />} />
+          <Route path="/main" element={<Main />} />
+          <Route path="/map" element={<Map locations={allLocations}/>} />
           <Route path="/tracker" element={<TrackerHistory />} />
           <Route path="/account" element={<AccountSettings />} />
           {/* Add a default route if you want, like redirecting to /main */}

@@ -107,19 +107,19 @@ const initialCenter = {
 //     { id: 3, name: "Pharmacy", lat: 47.621548, lng: -122.312200 }
 // ];
 
-export default function Map({props}) {
+export default function Map({locations}) {
     const [center, setCenter] = useState(initialCenter);
-    const [locations, setLocations] = useState([]); 
     const [searchTerm, setSearchTerm] = useState('');
-   
+    const [filteredLocations, setFilteredLocations] = useState([]);
+
     useEffect(() => {
-        if (searchTerm) {
-            const filteredLocations = allLocations.filter(location =>
+        if (!searchTerm) {
+            setFilteredLocations([]); 
+        } else {
+            const matches = locations.filter(location =>
                 location.name.toLowerCase().includes(searchTerm.toLowerCase())
             );
-            setLocations(filteredLocations);
-        } else {
-            setLocations([]);
+            setFilteredLocations(matches);
         }
     }, [searchTerm]);
 
@@ -127,6 +127,35 @@ export default function Map({props}) {
         setSearchTerm(e.target.value);
     };
 
+    // return (
+    //     <div className="map-container">
+    //         <h1>Map</h1>
+    //         <NavBar />
+    //         <div className="search-container">
+    //             <input
+    //                 type="text"
+    //                 placeholder="Search locations..."
+    //                 value={searchTerm}
+    //                 onChange={handleSearchChange}
+    //             />
+    //         </div>
+    //         <LoadScript
+    //             googleMapsApiKey="AIzaSyA-kLIXiapABvfC7WFWnM_8ajRad7Qp4b0"
+    //             libraries={['places']}
+    //         >
+    //             <GoogleMap
+    //                 mapContainerStyle={containerStyle}
+    //                 center={center}
+    //                 zoom={13}
+    //             >
+    //                 {locations.map(location => (
+    //                     <Marker key={location.id} position={{ lat: location.lat, lng: location.lng }} />
+    //                 ))}
+    //             </GoogleMap>
+    //         </LoadScript>
+    //         <Footer />
+    //     </div>
+    // );
     return (
         <div className="map-container">
             <h1>Map</h1>
@@ -141,15 +170,15 @@ export default function Map({props}) {
             </div>
             <LoadScript
                 googleMapsApiKey="AIzaSyA-kLIXiapABvfC7WFWnM_8ajRad7Qp4b0"
-                libraries={['places']}
+                libraries={['places']} 
             >
                 <GoogleMap
                     mapContainerStyle={containerStyle}
                     center={center}
                     zoom={13}
                 >
-                    {props.map(location => (
-                        <Marker key={location.id} position={{ lat: location.lat, lng: location.lng }} />
+                    {filteredLocations.map((location, index) => (
+                        <Marker key={index} position={{ lat: location.lat, lng: location.lng }} />
                     ))}
                 </GoogleMap>
             </LoadScript>
