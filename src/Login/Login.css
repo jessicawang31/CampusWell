@@ -16,16 +16,15 @@
   .intromain {
     border: 3px solid gray;
     color: white;
-    background-color: black;
-    width: 35%;
+    background-color: rgb(70, 1, 136);
     padding: 1rem;
-    padding-bottom: 20rem;
+    padding-bottom: 1rem;
     text-align: center;
     margin: auto;
   }
   
   .introfooter {
-    background-color: black;
+    background-color: rgb(70, 1, 136);
     color: white;
     margin-top: auto;
     padding: 1rem;
@@ -47,7 +46,6 @@
   
   .footercontainer, .introfootercontainer {
     display: flex;
-    max-width: 100%;
     margin-top: auto;
     flex-direction: column;
   }
@@ -87,7 +85,7 @@
       width:fit-content;
       margin: auto;
       height: 100%;
-      padding-bottom: 100%;
+
       align-items: center;
     }
   
