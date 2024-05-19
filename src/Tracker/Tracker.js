@@ -1,44 +1,44 @@
 import React from 'react';
 import NavBar from '../components/NavBar.js'; 
 import Footer from '../components/Footer.js'; 
+import { useState } from 'react';
+import { AppointmentList, DetailedInformation, NotesCard } from './TrackerComponents/appointmentList.js';
 import './Tracker.css';
 import '../index.css';
 
-export default function TrackerHistory() {
+export default function TrackerHistory(props) {
+    const [selectedVisit, setSelectedVisit] = useState({
+        notes: props.visits[0].notes,
+        img: props.visits[0].img,
+        description: props.visits[0].description,
+        service: props.visits[0].service,
+        location: props.visits[0].location
+    });
+
+    const handleAppointmentChange = (visit) => {
+        setSelectedVisit({
+            notes: visit.notes,
+            img: visit.img,
+            description: visit.description,
+            service: visit.service,
+            location: visit.location
+        });
+    };
+
     return (
-        <div>
+        <div className="tracker-page">
             <header>
                 <h1>Tracker History</h1>
             </header>
             <NavBar />
             <main>
                 <div className="widget-container">
-                    <section className="history-container">
-                    <h2>History</h2>
-                    <div className="past-appointments">
-                        {/* <select id="appointments" multiple onChange={applyFilter}> */}
-                        <select id="appointments">
-                            <option value="appointment">Dentist (3/1/24)</option>
-                            <option value="appointment">Checkup (2/5/24)</option>
-                        </select>
-                        </div>
-                    </section>
-                    <section className="notes-container">
-                        <h2>Visit Notes</h2>
-                        <div>
-                            <p>No notes entered</p>
-                        </div>
-                    </section>
-                    <section className="info-container">
-                        <h2>Place</h2>
-                        <div>
-                            <p>Image and service information</p>
-                        </div>
-                    </section>
+                    <AppointmentList visits={props.visits} onAppointmentChange={handleAppointmentChange} /> 
+                    <NotesCard notes={selectedVisit.notes} />
+                    <DetailedInformation visit={selectedVisit}/>
                 </div>
             </main>
             <Footer />
         </div>
-    // </div>
     );
 }

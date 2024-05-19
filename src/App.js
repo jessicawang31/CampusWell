@@ -5,6 +5,7 @@ import Main from './Main/Main.js';
 import Map from './Map/Map.js';
 import TrackerHistory from './Tracker/Tracker.js';
 import AccountSettings from './ProfileAccount/ProfileAccount';
+import HISTORY_DATA from './HistoryData/appointments.json';
 
 // hard coded data
 const allLocations = [
@@ -21,7 +22,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/main" element={<Main />} />
           <Route path="/map" element={<Map locations={allLocations}/>} />
-          <Route path="/tracker" element={<TrackerHistory />} />
+          <Route path="/tracker" element={<TrackerHistory visits={HISTORY_DATA} />} />
           <Route path="/account" element={<AccountSettings />} />
           {/* Add a default route if you want, like redirecting to /main */}
           <Route path="/" element={<Main />} />
