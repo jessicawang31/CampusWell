@@ -31,7 +31,7 @@ export default function Login() {
                     </section>
                 </div>
             </main>
-            <footer className="footer mt-auto fixed-bottom">
+            <footer className="footer mt-auto ">
                 <Footer />
             </footer>
             
