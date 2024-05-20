@@ -7,7 +7,7 @@ import '../index.css';
 
 const containerStyle = {
     width: '100%',
-    height: '750px'
+    height: '751px'
 };
 
 const initialCenter = {
