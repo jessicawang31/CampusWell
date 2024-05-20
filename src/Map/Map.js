@@ -1,89 +1,4 @@
-// import React, { useState } from 'react';
-// import NavBar from '../components/NavBar.js';
-// import Footer from '../components/Footer.js';
-// import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
-// import './Map.css';
-// import '../index.css';
-// import searchIcon from '../img/search.png';
-
-// const containerStyle = {
-//     width: '100%',
-//     height: '400px'
-// };
-
-// const initialCenter = {
-//     lat: 47.655548,
-//     lng: -122.303200
-// };
-
-// export default function Map() {
-//     const [center, setCenter] = useState(initialCenter); // For centering map
-//     const [markers, setMarkers] = useState([]); // For storing markers
-//     const [searchTerm, setSearchTerm] = useState(''); // For storing search input
-//     const [selectedFilters, setSelectedFilters] = useState([]); // For storing selected filters
-
-//     // Handlers for search and filters
-//     const handleSearchChange = (e) => {
-//         setSearchTerm(e.target.value);
-//     };
-
-//     const handleFilterChange = (e) => {
-//         const options = e.target.options;
-//         const values = [];
-//         for (let i = 0, len = options.length; i < len; i++) {
-//             if (options[i].selected) {
-//                 values.push(options[i].value);
-//             }
-//         }
-//         setSelectedFilters(values);
-//     };
-
-//     const performSearch = () => {
-//         // Here you might call a service to get new data based on search or update markers
-//         console.log('Search:', searchTerm);
-//         console.log('Filters:', selectedFilters);
-//     };
-
-//     return (
-//         <div className="map-container">
-//             <h1>Map</h1>
-//             <NavBar />
-//             <main>
-//                 <div className="functions">
-//                     <div className="search-container">
-//                         <input type="text" id="searchInput" placeholder="Search" value={searchTerm} onChange={handleSearchChange} />
-//                         <button onClick={performSearch}><img src={searchIcon} alt="Search" /></button>
-//                     </div>
-//                     <div className="filter-container">
-//                         <select id="filter" multiple onChange={handleFilterChange}>
-//                             <option value="all">All</option>
-//                             <option value="Payment">Payment Options</option>
-//                             <option value="Services">Services</option>
-//                         </select>
-//                     </div>
-//                 </div>
-                
-//                 <LoadScript
-//                     googleMapsApiKey="AIzaSyA-kLIXiapABvfC7WFWnM_8ajRad7Qp4b0" 
-//                 >
-//                     <GoogleMap
-//                         mapContainerStyle={containerStyle}
-//                         center={center}
-//                         zoom={15}
-//                     >
-//                         {markers.map(marker => (
-//                             <Marker key={marker.id} position={{ lat: marker.lat, lng: marker.lng }} />
-//                         ))}
-//                     </GoogleMap>
-//                 </LoadScript>
-//             </main>
-//             <Footer />
-//         </div>
-//     );
-// }
-
-
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 import NavBar from '../components/NavBar.js';
 import Footer from '../components/Footer.js';
@@ -100,85 +15,70 @@ const initialCenter = {
     lng: -122.303200
 };
 
-// Sample location data
-// const allLocations = [
-//     { id: 1, name: "Urgent Care Center", lat: 47.661548, lng: -122.318200 },
-//     { id: 2, name: "Local Hospital", lat: 47.603548, lng: -122.335200 },
-//     { id: 3, name: "Pharmacy", lat: 47.621548, lng: -122.312200 }
-// ];
+export default function Map() {
+    const places = ['places'];
 
-export default function Map({locations}) {
     const [center, setCenter] = useState(initialCenter);
     const [searchTerm, setSearchTerm] = useState('');
-    const [filteredLocations, setFilteredLocations] = useState([]);
+    const [markers, setMarkers] = useState([]);
+    const mapRef = useRef(null);
 
-    useEffect(() => {
-        if (!searchTerm) {
-            setFilteredLocations([]); 
-        } else {
-            const matches = locations.filter(location =>
-                location.name.toLowerCase().includes(searchTerm.toLowerCase())
-            );
-            setFilteredLocations(matches);
-        }
-    }, [searchTerm]);
+    const onLoad = map => mapRef.current = map;
 
-    const handleSearchChange = (e) => {
-        setSearchTerm(e.target.value);
+    const handleSearchChange = (e) => setSearchTerm(e.target.value);
+
+    const handleSearchSubmit = () => {
+        if (!mapRef.current || !searchTerm) return;
+
+        const service = new window.google.maps.places.PlacesService(mapRef.current);
+        const request = {
+            query: searchTerm,
+            location: center, 
+            radius: '5000', 
+        };
+
+        service.textSearch(request, (results, status) => {
+            if (status === window.google.maps.places.PlacesServiceStatus.OK) {
+                const newMarkers = results.map(place => ({
+                    id: place.id,
+                    lat: place.geometry.location.lat(),
+                    lng: place.geometry.location.lng()
+                }));
+                setMarkers(newMarkers);
+            } else {
+                console.error('Search was not successful for the following reason: ' + status);
+            }
+        });
     };
 
-    // return (
-    //     <div className="map-container">
-    //         <h1>Map</h1>
-    //         <NavBar />
-    //         <div className="search-container">
-    //             <input
-    //                 type="text"
-    //                 placeholder="Search locations..."
-    //                 value={searchTerm}
-    //                 onChange={handleSearchChange}
-    //             />
-    //         </div>
-    //         <LoadScript
-    //             googleMapsApiKey="AIzaSyA-kLIXiapABvfC7WFWnM_8ajRad7Qp4b0"
-    //             libraries={['places']}
-    //         >
-    //             <GoogleMap
-    //                 mapContainerStyle={containerStyle}
-    //                 center={center}
-    //                 zoom={13}
-    //             >
-    //                 {locations.map(location => (
-    //                     <Marker key={location.id} position={{ lat: location.lat, lng: location.lng }} />
-    //                 ))}
-    //             </GoogleMap>
-    //         </LoadScript>
-    //         <Footer />
-    //     </div>
-    // );
     return (
-        <div className="map-container">
+        <div className='map-container'>
             <h1>Map</h1>
             <NavBar />
-            <div className="search-container">
-                <input
-                    type="text"
-                    placeholder="Search locations..."
-                    value={searchTerm}
-                    onChange={handleSearchChange}
-                />
-            </div>
+            <input
+                type='text'
+                placeholder='Search'
+                value={searchTerm}
+                onChange={handleSearchChange}
+                onKeyPress={event => {
+                    if (event.key === 'Enter') {
+                        handleSearchSubmit();
+                    }
+                }}
+            />
+            <button onClick={handleSearchSubmit}>Search</button>
             <LoadScript
-                googleMapsApiKey="AIzaSyA-kLIXiapABvfC7WFWnM_8ajRad7Qp4b0"
-                libraries={['places']} 
+                googleMapsApiKey='AIzaSyA-kLIXiapABvfC7WFWnM_8ajRad7Qp4b0'
+                libraries={places}
             >
                 <GoogleMap
                     mapContainerStyle={containerStyle}
                     center={center}
                     zoom={13}
+                    onLoad={onLoad}
                 >
-                    {filteredLocations.map((location, index) => (
-                        <Marker key={index} position={{ lat: location.lat, lng: location.lng }} />
+                    {markers.map((marker, index) => (
+                        <Marker key={index} position={{ lat: marker.lat, lng: marker.lng }} />
                     ))}
                 </GoogleMap>
             </LoadScript>
