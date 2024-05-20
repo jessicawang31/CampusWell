@@ -81,9 +81,7 @@ export default function AccountSettings() {
     if (Object.keys(errors).length === 0) {
       if (editorRef.current) {
         const canvas = editorRef.current.getImage();
-        const dataUrl = canvas.toDataURL('image/jpeg', 0.8); // compress image to 80% quality
-
-        // Compress the image further if needed
+        const dataUrl = canvas.toDataURL('image/jpeg', 0.9); 
         const img = new Image();
         img.src = dataUrl;
         img.onload = () => {
