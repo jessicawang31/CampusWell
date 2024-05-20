@@ -15,15 +15,16 @@ export default function TrackerHistory(props) {
         location: props.visits[0].location
     });
 
-    const handleAppointmentChange = (visit) => {
-        setSelectedVisit({
-            notes: visit.notes,
-            img: visit.img,
-            description: visit.description,
-            service: visit.service,
-            location: visit.location
-        });
-    };
+const handleAppointmentChange = (visit) => {
+    setSelectedVisit({
+        notes: visit.notes,
+        img: visit.img,
+        description: visit.description,
+        service: visit.service,
+        location: visit.location
+    });
+};
+
 
     return (
         <div className="tracker-page">
