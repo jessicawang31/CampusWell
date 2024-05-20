@@ -4,10 +4,10 @@ import "./Footer.css";
 export default function Footer() {
     return (
         <div>
-            <div className="introfootercontainer footer mt-auto fixed-bottom">
+            <div className="introfootercontainer">
                 <div className="introfootercontent">
                     <footer className="introfooter container-fluid">
-                        <div className="row">
+                        <div className="row ">
                             <div className="col text-start">
                                 <p>&copy; 2024 CampusWell.</p>
                             </div>

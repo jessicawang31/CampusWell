@@ -3,6 +3,8 @@ import Footer from "../components/Footer.js";
 import './Login.css';
 import '../index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link } from 'react-router-dom';
+
 
 export default function Login() {
     return (
@@ -24,12 +26,15 @@ export default function Login() {
                                     <b>Password:</b><br />
                                 </label><input id="password_input" type="password" name="password" placeholder="******" />
                             </div>
-                            <button className="submitbutton" aria-label="Submit" type="submit"><a href="Main.js">Log In</a></button>
+                            <button className="submitbutton" aria-label="Submit" type="submit"><a href="Main.js"><Link to="/main">Log In</Link></a></button>
                         </form>
                     </section>
                 </div>
             </main>
-            <Footer />
+            <footer className="footer mt-auto fixed-bottom">
+                <Footer />
+            </footer>
+            
         </div>
     );
 }
