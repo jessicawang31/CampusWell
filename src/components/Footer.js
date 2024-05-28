@@ -4,7 +4,7 @@ import "./Footer.css";
 export default function Footer() {
     return (
         <div>
-            <div className="introfootercontainer footer fixed-bottom">
+            <div className="introfootercontainer footer sticky-bottom">
                 <div className="introfootercontent">
                     <footer className="introfooter container-fluid">
                         <div className="row ">
