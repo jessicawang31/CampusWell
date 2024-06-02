@@ -46,6 +46,7 @@
 	border: 1px solid #ddd;
 	border-radius: 4px;
 	box-sizing: border-box;
+	border-bottom: 2rem;
 }
 
 #profile-form .form-group input:focus,
@@ -94,3 +95,4 @@
 	font-size: 0.875rem;
 	margin-top: 5px;
 }
+

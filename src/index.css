@@ -45,3 +45,17 @@ main, .text, .content-container, .boxes {
         min-height: 100vh;
     }
 }
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
