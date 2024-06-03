@@ -21,7 +21,7 @@ export default function Main() {
                 <img className="home-img" src = {healthImage} />
             </div>
         </div>
-        <div className="fixed-bottom">
+        <div className="footer mt-auto">
           <Footer />
         </div>
     </div>

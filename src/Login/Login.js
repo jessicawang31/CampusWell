@@ -4,7 +4,7 @@ import './Login.css';
 import '../index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
-
+import '../ProfileAccount/ProfileAccount.js';
 
 export default function Login() {
     return (
@@ -16,7 +16,7 @@ export default function Login() {
                 <div className="intromain">
                     <section className="login">
                         <h2 className="introh2">Log in to CampusWell</h2>
-                        <h2 className="text-small introh2">Don't have an account? <a href="https://example.com/">Sign Up!</a></h2>
+                        <h2 className="text-small introh2">Don't have an account? <Link to="../ProfileAccount/ProfileAccount.js">Sign Up!</Link></h2>
                         <form>
                             <div className="entryboxes py-4">
                                 <label for="email_input" className="titles">
@@ -31,7 +31,7 @@ export default function Login() {
                     </section>
                 </div>
             </main>
-            <footer className="footer mt-auto ">
+            <footer className="footer mt-auto">
                 <Footer />
             </footer>
             
