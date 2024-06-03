@@ -3,9 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-html, body {
-  height: 100%;
-}
 
 .introheader {
   background-color: rgb(70, 1, 136);
@@ -16,7 +13,8 @@ html, body {
 
 .introh1 {
   margin: 0;
-  padding: 1rem 0; 
+  padding: 1rem 0;
+  font-size: 2.5rem;
 }
 
 .introflex {
@@ -31,79 +29,96 @@ html, body {
   align-items: center;
   flex-grow: 1;
   width: 100%;
+  background-color: white; /* White background */
 }
 
 .intromain {
   border: 3px solid gray;
   color: white;
+  background-color: white;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.introh2 {
+  color: black;
+  font-size: 2rem;
+  margin: 0 0 1rem 0;
+}
+
+.text-small {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.entryboxes {
+  margin-bottom: 1rem;
+}
+
+.titles {
+  display: block; 
+  margin-bottom: 0.5rem;
+}
+
+input[type="email"], input[type="password"] {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: white;
+  color: rgb(70, 1, 136);
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.introfooter {
   background-color: rgb(70, 1, 136);
+  color: white;
+  margin-top: auto;
   padding: 1rem;
   text-align: center;
 }
 
-.introh2 {
-  color: white;
-  font-size: 3rem;
-  margin: 0;
-}
+/* footer flex */
 
-
-  .introfooter {
-    background-color: rgb(70, 1, 136);
-    color: white;
-    margin-top: auto;
+/* iPhone Pro Max */
+@media (max-width: 430px) {
+  .intromain {
+    width: 90%;
     padding: 1rem;
   }
-  
-  .submitbutton {
-    margin-top: 1rem;
-  }
-  
-  .text-small {
-    font-size: 1rem;
-    padding-bottom: 1rem;
-    padding-top: 1rem;
+}
+
+/* iPad Pro */
+@media (min-width: 1000px) {
+  .text-small, body {
+    font-size: 1.5rem;
   }
 
-  /* footer flex */
-  
-  /* iPhone Pro Max */
-  @media (max-width: 430px) {
-    .intromain {
-      display: flex;
-      width:fit-content;
-      height: 100%;
-      padding-bottom: 100%;
-      align-items: center;
-    }
-  
-    .boxes {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-  
+  .intromain {
+    font-size: 1.5rem;
+    width: 50%;
+    margin: auto;
   }
-  
-  /* iPad Pro*/
-  @media (min-width: 1000px) {
-  
-    .text-small, body {
-      font-size: 1.5rem;
-    }
-  
-    .intromain {
-      font-size: 36px;
-      width:fit-content;
-      margin: auto;
-      height: 100%;
 
-      align-items: center;
-    }
-  
-    .introfooter, .footer {
-      text-align: center;
-      margin-top: auto;
-      width: 100%;
-    }
+  .introfooter {
+    text-align: center;
+    width: 100%;
   }
+}

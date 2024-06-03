@@ -7,33 +7,50 @@ import { Link } from 'react-router-dom';
 
 export default function Login() {
     return (
-        <div className="introflex">
+        <div className="introflex vh-100">
             <header className="introheader">
                 <h1 className="introh1">CampusWell</h1>
             </header>
-            <main>
-                <div className="intromain">
-                    <section className="login">
-                        <h2 className="introh2">Log in to CampusWell</h2>
-                        <h2 className="text-small introh2">Don't have an account? <a href="ProfileAccount.js"><Link to="/account">Sign Up!</Link></a></h2>
-                        <form>
-                            <div className="entryboxes py-4">
-                                <label for="email_input" className="titles">
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Email:</b><br />
-                                </label><input id="email_input" type="email" name="email" placeholder="email@domain.com" /><br />
-                                <label for="password_input" className="titles">
-                                    <b>Password:</b><br />
-                                </label><input id="password_input" type="password" name="password" placeholder="******" />
+            <main className="d-flex justify-content-center align-items-center flex-grow-1">
+                <div className="col-12 col-md-8 col-lg-6 col-xl-5">
+                    <div className="card text-black bg-white" style={{ borderRadius: '1rem' }}>
+                        <div className="card-body p-5 text-center">
+                            <div className="mb-md-5 mt-md-4 pb-5">
+                                <h2 className="fw-bold mb-2 text-uppercase">Login</h2>
+                                <p className="text-black-50 mb-5">Please enter your login and password!</p>
+
+                                <div className="form-outline form-black mb-4">
+                                    <input type="email" id="typeEmailX" className="form-control form-control-lg" placeholder="email@domain.com" />
+                                    <label className="form-label" htmlFor="typeEmailX">Email</label>
+                                </div>
+
+                                <div className="form-outline form-black mb-4">
+                                    <input type="password" id="typePasswordX" className="form-control form-control-lg" placeholder="******" />
+                                    <label className="form-label" htmlFor="typePasswordX">Password</label>
+                                </div>
+
+                                <Link to="/main"><button className="btn btn-outline-dark btn-lg px-5" type="button">Login</button></Link>
+
+                                <div className="d-flex justify-content-center text-center mt-4 pt-1">
+                                    <a href="#!" className="text-black"><i className="fab fa-facebook-f fa-lg"></i></a>
+                                    <a href="#!" className="text-black"><i className="fab fa-twitter fa-lg mx-4 px-2"></i></a>
+                                    <a href="#!" className="text-black"><i className="fab fa-google fa-lg"></i></a>
+                                </div>
+
                             </div>
-                            <button className="submitbutton" aria-label="Submit" type="submit"><a href="Main.js"><Link to="/main">Log In</Link></a></button>
-                        </form>
-                    </section>
+
+                            <div>
+                                <p className="mb-0">Don't have an account? <a href="ProfileAccount.js"><Link to="/account">Sign Up!</Link></a></p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </main>
+
             <footer className="footer mt-auto">
                 <Footer />
             </footer>
-            
+        
         </div>
     );
 }
