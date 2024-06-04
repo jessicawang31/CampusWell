@@ -1,10 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { ref, set, onValue } from 'firebase/database';
 import AvatarEditor from 'react-avatar-editor';
-import NavBar from '../components/NavBar.js'; 
-import Footer from '../components/Footer.js'; 
+import NavBar from '../components/NavBar.js';
+import Footer from '../components/Footer.js';
 import './ProfileAccount.css';
 import '../index.css';
 import profileImg from '../img/blankprofile.png';
+import { database } from '../index';
 
 const stateCityMap = {
   'WA': ['Seattle', 'Spokane', 'Tacoma'],
@@ -31,17 +33,24 @@ export default function AccountSettings() {
   const editorRef = useRef(null);
 
   useEffect(() => {
-    const storedData = JSON.parse(localStorage.getItem('profileData'));
-    if (storedData) {
-      setFormData(storedData);
-      if (storedData.state) {
-        setCities(stateCityMap[storedData.state]);
+    const profileDataRef = ref(database, 'profileData');
+    onValue(profileDataRef, (snapshot) => {
+      const storedData = snapshot.val();
+      if (storedData) {
+        setFormData(storedData);
+        if (storedData.state) {
+          setCities(stateCityMap[storedData.state]);
+        }
       }
-    }
-    const storedImage = localStorage.getItem('profileImage');
-    if (storedImage) {
-      setProfileImage(storedImage);
-    }
+    });
+
+    const profileImageRef = ref(database, 'profileImage');
+    onValue(profileImageRef, (snapshot) => {
+      const storedImage = snapshot.val();
+      if (storedImage) {
+        setProfileImage(storedImage);
+      }
+    });
   }, []);
 
   const handleInputChange = (e) => {
@@ -79,27 +88,32 @@ export default function AccountSettings() {
     const errors = validateForm();
     setFormErrors(errors);
     if (Object.keys(errors).length === 0) {
-      if (editorRef.current) {
-        const canvas = editorRef.current.getImage();
-        const dataUrl = canvas.toDataURL('image/jpeg', 0.9); 
-        const img = new Image();
-        img.src = dataUrl;
-        img.onload = () => {
-          const tempCanvas = document.createElement('canvas');
-          const ctx = tempCanvas.getContext('2d');
-          tempCanvas.width = 150;
-          tempCanvas.height = 150;
-          ctx.drawImage(img, 0, 0, tempCanvas.width, tempCanvas.height);
-          const compressedDataUrl = tempCanvas.toDataURL('image/jpeg', 0.8);
+      try {
+        if (editorRef.current) {
+          const canvas = editorRef.current.getImage();
+          const dataUrl = canvas.toDataURL('image/jpeg', 0.9);
+          const img = new Image();
+          img.src = dataUrl;
+          img.onload = async () => {
+            const tempCanvas = document.createElement('canvas');
+            const ctx = tempCanvas.getContext('2d');
+            tempCanvas.width = 150;
+            tempCanvas.height = 150;
+            ctx.drawImage(img, 0, 0, tempCanvas.width, tempCanvas.height);
+            const compressedDataUrl = tempCanvas.toDataURL('image/jpeg', 0.8);
 
-          setProfileImage(compressedDataUrl);
-          localStorage.setItem('profileImage', compressedDataUrl);
+            setProfileImage(compressedDataUrl);
+            await set(ref(database, 'profileImage'), compressedDataUrl);
+            setSubmissionMessage('Profile updated successfully!');
+            await set(ref(database, 'profileData'), formData);
+          };
+        } else {
           setSubmissionMessage('Profile updated successfully!');
-          localStorage.setItem('profileData', JSON.stringify(formData));
-        };
-      } else {
-        setSubmissionMessage('Profile updated successfully!');
-        localStorage.setItem('profileData', JSON.stringify(formData));
+          await set(ref(database, 'profileData'), formData);
+        }
+      } catch (error) {
+        console.error('Error updating profile:', error);
+        setSubmissionMessage('Failed to update profile. Please try again.');
       }
     }
   };
@@ -219,8 +233,8 @@ export default function AccountSettings() {
                   state: '',
                   password: ''
                 });
-                localStorage.removeItem('profileData');
-                localStorage.removeItem('profileImage');
+                set(ref(database, 'profileData'), null);
+                set(ref(database, 'profileImage'), null);
                 setProfileImage(profileImg);
               }}>Cancel</button>
             </div>
