@@ -7,7 +7,7 @@ import App from "./App";
 import { initializeApp, getApps } from "firebase/app";
 import { getDatabase } from "firebase/database";
 
-// Your web app's Firebase configuration
+//  web app's Firebase configuration
 const firebaseConfig = {
 	apiKey: "AIzaSyC3CaYRbFP7Hkq-KYvurIBFVK9ZQ6MHZB8",
 	authDomain: "campus-well.firebaseapp.com",
