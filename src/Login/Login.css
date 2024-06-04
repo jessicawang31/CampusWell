@@ -1,3 +1,5 @@
+/* inspiration: https://mdbootstrap.com/docs/standard/extended/login/ */
+
 * {
   margin: 0;
   padding: 0;
@@ -120,7 +122,7 @@ html, body {
 }
 
 .text-muted {
-  color: #6c757d !important;
+  color: #6c757d;
 }
 
 .footer {
