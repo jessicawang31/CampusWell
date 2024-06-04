@@ -57,12 +57,18 @@ export default function TrackerHistory(props) {
             </header>
             <NavBar />
             <main>
-                <div className="widget-container">
-                    <AppointmentList visits={visits} onAppointmentChange={handleAppointmentChange} /> 
-                    <NotesCard notes={selectedVisit.notes} onNotesClick={handleNotesClick} />
-                    <DetailedInformation visit={selectedVisit} />
+                <div className="tracker-container">
+                    <div className="widget-container">
+                        <AppointmentList visits={visits} onAppointmentChange={handleAppointmentChange} /> 
+                        <div className="notes-widgets">
+                            <NotesCard notes={selectedVisit.notes} onNotesClick={handleNotesClick} />
+                            {isPopupOpen && <EditNotesPopup notes={selectedVisit.notes} onSave={handleNotesSave} onClose={handlePopupClose} />}
+                        </div>
+                    </div>
+                    <div>
+                        <DetailedInformation visit={selectedVisit} />
+                    </div>
                 </div>
-                {isPopupOpen && <EditNotesPopup notes={selectedVisit.notes} onSave={handleNotesSave} onClose={handlePopupClose} />}
             </main>
             <Footer />
         </div>

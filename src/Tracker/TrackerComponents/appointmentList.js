@@ -61,7 +61,7 @@ export const EditNotesPopup = ({ notes, onSave, onClose }) => {
     };
 
     return (
-        <div className="popup-overlay">
+        <div className="popup-container">
             <div className="popup">
                 <h2>Edit Notes</h2>
                 <textarea className="New-Note-TextArea" value={newNotes} onChange={(e) => setNewNotes(e.target.value)} />
