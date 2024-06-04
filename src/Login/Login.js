@@ -86,7 +86,7 @@ export default function Login() {
                             </div>
 
                             <div>
-                                <p className="signup-link">Don't have an account? <Link to="/profile">Sign Up!</Link></p>
+                                <p className="signup-link">Don't have an account? <a href="ProfileAccount.js"><Link to="/account">Sign Up!</Link></a></p>
                             </div>
                         </div>
                     </div>
