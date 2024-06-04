@@ -9,7 +9,7 @@ import healthImage from '../img/health.png';
 export default function Main() {
   return (
     <div className="main-container">
-        <h1>Campus Well</h1>
+        <h1>About</h1>
         <NavBar />
         <div className="content-container">
             <div className="text-side">

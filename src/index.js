@@ -23,7 +23,8 @@ const firebaseConfig = {
   storageBucket: "campus-well.appspot.com",
   messagingSenderId: "802980392745",
   appId: "1:802980392745:web:ba1e5c56caaeb0fca2d138",
-  measurementId: "G-7ERLYN9RBC"
+  measurementId: "G-7ERLYN9RBC",
+  databaseURL: "https://campus-well-default-rtdb.firebaseio.com/"
 };
 
 // Initialize Firebase
