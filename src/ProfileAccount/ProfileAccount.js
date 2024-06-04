@@ -11,8 +11,16 @@ import { database } from '../index';
 const stateCityMap = {
   'WA': ['Seattle', 'Spokane', 'Tacoma'],
   'CA': ['Los Angeles', 'San Francisco', 'San Diego'],
-  'NY': ['New York', 'Buffalo', 'Rochester']
+  'NY': ['New York', 'Buffalo', 'Rochester'],
+  'TX': ['Houston', 'Dallas', 'Austin'],
+  'FL': ['Miami', 'Orlando', 'Tampa'],
+  'IL': ['Chicago', 'Springfield', 'Naperville'],
+  'PA': ['Philadelphia', 'Pittsburgh', 'Allentown'],
+  'OH': ['Columbus', 'Cleveland', 'Cincinnati'],
+  'GA': ['Atlanta', 'Savannah', 'Augusta'],
+  'NC': ['Charlotte', 'Raleigh', 'Greensboro'],
 };
+
 
 export default function AccountSettings() {
   const [formData, setFormData] = useState({
