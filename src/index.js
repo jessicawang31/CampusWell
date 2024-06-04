@@ -1,40 +1,37 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-
-
-import firebase from 'firebase/app';
-import 'firebase/firestore';
-import 'firebase/auth';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
 
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { initializeApp, getApps } from "firebase/app";
+import { getDatabase } from "firebase/database";
 
 // Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyC3CaYRbFP7Hkq-KYvurIBFVK9ZQ6MHZB8",
-  authDomain: "campus-well.firebaseapp.com",
-  projectId: "campus-well",
-  storageBucket: "campus-well.appspot.com",
-  messagingSenderId: "802980392745",
-  appId: "1:802980392745:web:ba1e5c56caaeb0fca2d138",
-  measurementId: "G-7ERLYN9RBC",
-  databaseURL: "https://campus-well-default-rtdb.firebaseio.com/"
+	apiKey: "AIzaSyC3CaYRbFP7Hkq-KYvurIBFVK9ZQ6MHZB8",
+	authDomain: "campus-well.firebaseapp.com",
+	databaseURL: "https://campus-well-default-rtdb.firebaseio.com",
+	projectId: "campus-well",
+	storageBucket: "campus-well.appspot.com",
+	messagingSenderId: "802980392745",
+	appId: "1:802980392745:web:6489de328cbd9c0ba2d138",
+	measurementId: "G-RB5F601H07",
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+let app;
+if (!getApps().length) {
+	app = initializeApp(firebaseConfig);
+} else {
+	app = getApps()[0];
+}
 
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const database = getDatabase(app);
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+	<React.StrictMode>
+		<App />
+	</React.StrictMode>
 );
+
+export { database };
