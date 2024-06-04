@@ -14,8 +14,8 @@ export default function Login() {
             <main className="d-flex justify-content-center align-items-center flex-grow-1">
                 <div className="col-12 col-md-8 col-lg-6 col-xl-5">
                     <div className="card text-black bg-white" style={{ borderRadius: '1rem' }}>
-                        <div className="card-body p-5 text-center">
-                            <div className="mb-md-5 mt-md-4 pb-5">
+                        <div className="card-body text-center">
+                            <div className="">
                                 <h2 className="fw-bold mb-2 text-uppercase">Login</h2>
                                 <p className="text-black-50 mb-5">Please enter your login and password!</p>
 
@@ -47,7 +47,7 @@ export default function Login() {
                 </div>
             </main>
 
-            <footer className="footer mt-auto">
+            <footer>
                 <Footer />
             </footer>
         
