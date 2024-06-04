@@ -2,31 +2,28 @@
     {
         "date":"9/20/2023", 
         "location":"123 Maple Street, Springfield, IL 62701", 
-        "service":"Dental Appointment", "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", 
-        "description": "amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt", 
+        "service":"Dental Appointment", 
+        "notes": "The dental assistants were really friendly and helped me schedule my next appointment!", 
         "img":"https://picsum.photos/200/300"
     },
     {
         "date":"11/11/2023", 
         "location":"456 Elm Avenue, Metropolis, NY 10001", 
         "service":"Yearly-Checkup", 
-        "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At auctor urna nunc id cursus metus aliquam.", 
-        "description": "Clinic Bio", 
+        "notes": "The wait was really long and the location isn't the best for me.", 
         "img":"https://source.unsplash.com/200x300"
     },
     {
         "date":"3/7/2024", 
         "location":"789 Oak Boulevard, Gotham, NJ 07001", 
         "service":"ER Visit", 
-        "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Magna eget est lorem ipsum. Dictumst quisque sagittis purus sit. Platea dictumst quisque sagittis purus. A condimentum vitae sapien pellentesque habitant morbi.", 
-        "description": "Hospital Bio", 
+        "notes": "The staff were very helpful and understanding. The wait wasn't too long.", 
         "img":"https://picsum.photos/200/300"},
     {
         "date":"5/23/2024", 
         "location":"101 Pine Lane, Star City, CA 90001", 
         "service":"Therapy Visit", 
-        "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua", 
-        "description": "Counselor Bio", 
+        "notes": "Overpriced and the therapist felt judgemental.", 
         "img":"https://source.unsplash.com/200x300"
     }
 ]
