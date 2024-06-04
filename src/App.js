@@ -25,43 +25,52 @@ const App = () => {
   useEffect(() => {
     const db = getDatabase();
     const visitRef = ref(db, 'allVisits');
-
     const addHistoryDataToFirebase = async () => {
-      const snapshot = await get(visitRef);
-      if (!snapshot.exists()) {
-        console.log("Adding HISTORY_DATA to Firebase");
-        HISTORY_DATA.forEach((appointment) => {
-          push(visitRef, appointment);
-        });
+      try {
+        const snapshot = await get(visitRef);
+        if (!snapshot.exists()) {
+          console.log("Adding HISTORY_DATA to Firebase");
+          HISTORY_DATA.forEach((appointment) => {
+            push(visitRef, appointment);
+          });
+        }
+      } catch (error) {
+        console.error("Error adding initial visits to history:", error);
       }
     };
-
+  
     if (!isInitialized.current) {
       addHistoryDataToFirebase();
       isInitialized.current = true;
     }
-  }, []); // Add an empty dependency array to run only once
+  }, []);
+  
 
-  // Set up onValue listener
   useEffect(() => {
     const db = getDatabase();
     const visitRef = ref(db, 'allVisits');
-
-    const unsubscribe = onValue(visitRef, (snapshot) => {
-      console.log("database changed!");
-      const allVisitObj = snapshot.val();
-      const keyArray = allVisitObj ? Object.keys(allVisitObj) : [];
-      const allVisitArray = keyArray.map((key) => {
-        const transformed = allVisitObj[key];
-        transformed.firebaseKey = key;
-        return transformed;
-      });
-      console.log(allVisitArray);
-      setHistoryStateArray(allVisitArray);
-    });
-
-    return () => unsubscribe(); // Cleanup on unmount
-  }, []); // Add an empty dependency array to run only once
+  
+    const unsubscribe = onValue(visitRef, 
+      (snapshot) => {
+        console.log("database changed!");
+        const allVisitObj = snapshot.val();
+        const keyArray = allVisitObj ? Object.keys(allVisitObj) : [];
+        const allVisitArray = keyArray.map((key) => {
+          const transformed = allVisitObj[key];
+          transformed.firebaseKey = key;
+          return transformed;
+        });
+        console.log(allVisitArray);
+        setHistoryStateArray(allVisitArray);
+      },
+      (error) => {
+        console.error("Error fetching visits from database:", error);
+      }
+    );
+  
+    return () => unsubscribe();
+  }, []);
+  
 
   return (
     <BrowserRouter>
