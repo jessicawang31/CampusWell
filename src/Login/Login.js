@@ -6,7 +6,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
 
 export default function Login() {
-<<<<<<< Updated upstream
     return (
         <div className="introflex vh-100">
             <header className="introheader">
@@ -19,20 +18,6 @@ export default function Login() {
                             <div className="">
                                 <h2 className="fw-bold mb-2 text-uppercase">Login</h2>
                                 <p className="text-black-50 mb-5">Please enter your login and password!</p>
-=======
-    return (
-        <div className="introflex vh-100">
-            <header className="introheader">
-                <h1 className="introh1">CampusWell</h1>
-            </header>
-            <main className="d-flex justify-content-center align-items-center flex-grow-1">
-                <div className="col-12 col-md-8 col-lg-6 col-xl-5">
-                    <div className="card text-black bg-white" style={{ borderRadius: '1rem' }}>
-                        <div className="card-body text-center">
-                            <div className="">
-                                <h2 className="fw-bold mb-2 text-uppercase">Login</h2>
-                                <p className="text-black-50 mb-5">Please enter your login and password!</p>
->>>>>>> Stashed changes
 
                                 <div className="form-outline form-black mb-4">
                                     <input type="email" id="typeEmailX" className="form-control form-control-lg" placeholder="email@domain.com" />
@@ -62,7 +47,6 @@ export default function Login() {
                 </div>
             </main>
 
-<<<<<<< Updated upstream
             <footer>
                 <Footer />
             </footer>
@@ -70,12 +54,3 @@ export default function Login() {
         </div>
     );
 }
-=======
-            <footer>
-                <Footer />
-            </footer>
-        
-        </div>
-    );
-}
->>>>>>> Stashed changes
